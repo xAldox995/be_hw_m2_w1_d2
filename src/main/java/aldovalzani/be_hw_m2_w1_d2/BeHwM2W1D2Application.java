@@ -14,6 +14,13 @@ public class BeHwM2W1D2Application {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppManager.class);
         Menu menu = (Menu) context.getBean("menu");
         menu.stampaMenu();
+
+
+        /*TEST CLASSE CON LOMBOK
+        Tavolo t1 = new Tavolo(1, 7, StatoTavolo.LIBERO);
+        System.out.println(t1.getIdTavolo());
+
+         */
     }
 
 }

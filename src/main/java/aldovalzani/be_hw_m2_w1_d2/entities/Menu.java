@@ -12,6 +12,22 @@ public class Menu {
         this.pizzaList = pizzaList;
     }
 
+    public List<Drink> getDrinkList() {
+        return drinkList;
+    }
+
+    public void setDrinkList(List<Drink> drinkList) {
+        this.drinkList = drinkList;
+    }
+
+    public List<Pizza> getPizzaList() {
+        return pizzaList;
+    }
+
+    public void setPizzaList(List<Pizza> pizzaList) {
+        this.pizzaList = pizzaList;
+    }
+
     public void stampaMenu() {
         System.out.println("Pizzas: ");
         for (Pizza pizza : pizzaList) {
