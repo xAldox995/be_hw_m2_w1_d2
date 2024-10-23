@@ -1,6 +1,7 @@
 package aldovalzani.be_hw_m2_w1_d2;
 
 import aldovalzani.be_hw_m2_w1_d2.testClasses.CalculatorClass;
+import aldovalzani.be_hw_m2_w1_d2.testClasses.Password;
 import aldovalzani.be_hw_m2_w1_d2.testClasses.UtilityArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -40,5 +41,11 @@ class BeHwM2W1D2ApplicationTests {
         Assertions.assertThrows(ArithmeticException.class, () -> {
             calcolatrice.divisione(5, 0);
         });
+    }
+
+    @Test
+    public void testValidaPassword() {
+        Password validatore = new Password();
+        Assertions.assertTrue(validatore.passwordValida("Epic0d&2024"));
     }
 }
