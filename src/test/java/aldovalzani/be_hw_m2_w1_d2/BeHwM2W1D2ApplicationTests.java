@@ -33,4 +33,12 @@ class BeHwM2W1D2ApplicationTests {
         Assertions.assertTrue(calcolatrice.oddOrEven(num));
     }
 
+
+    @Test
+    public void testDivisione() {
+        CalculatorClass calcolatrice = new CalculatorClass();
+        Assertions.assertThrows(ArithmeticException.class, () -> {
+            calcolatrice.divisione(5, 0);
+        });
+    }
 }
