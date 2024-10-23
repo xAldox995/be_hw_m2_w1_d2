@@ -8,4 +8,11 @@ public class CalculatorClass {
     public boolean oddOrEven(int num) {
         return num % 2 == 0;
     }
+
+    public int divisione(int n1, int n2) {
+        if (n2 == 0) {
+            throw new ArithmeticException("Non si può  dividere per 0");
+        }
+        return n1 / n2;
+    }
 }
