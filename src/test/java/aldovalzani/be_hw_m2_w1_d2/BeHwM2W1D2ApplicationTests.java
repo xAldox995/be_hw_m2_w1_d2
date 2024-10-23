@@ -4,6 +4,8 @@ import aldovalzani.be_hw_m2_w1_d2.testClasses.CalculatorClass;
 import aldovalzani.be_hw_m2_w1_d2.testClasses.UtilityArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -24,6 +26,11 @@ class BeHwM2W1D2ApplicationTests {
         Assertions.assertFalse(utility.elSearch(array, "React"));
     }
 
-    @Test
+    @ParameterizedTest
+    @ValueSource(ints = {2, 8, 12, 20})
+    public void testOddOrEven(int num) {
+        CalculatorClass calcolatrice = new CalculatorClass();
+        Assertions.assertTrue(calcolatrice.oddOrEven(num));
+    }
 
 }
